@@ -23,7 +23,7 @@ services:
       - postgres
       - redis
     ports:
-      - ${BACKEND_PORT:-8080}:3000
+      - ${BACKEND_PORT:-8182}:3000
     networks:
       - ticketz
 
@@ -32,7 +32,7 @@ services:
       context: ./frontend
       dockerfile: ./Dockerfile
     ports:
-      - ${FRONTEND_PORT:-3000}:80
+      - ${FRONTEND_PORT:-3232}:80
     env_file:
       - .env-frontend-local
     volumes:
